@@ -174,7 +174,7 @@ typedef enum {
 } esp_at_result_code_string_index;
 
 /**
- * @brief This function should be called only once.
+ * @brief This function should be called only once, before any other AT functions are called.
  *
  * @param custom_version version information by custom
  */
@@ -235,7 +235,7 @@ void esp_at_port_recv_data_notify_from_isr(int32_t len);
  *        This function MUST NOT be used in isr.
  *
  * @param len data length
- * @param msec timeout time,The unit is millisecond. It waits forever,if msec is portMAX_DELAY.
+ * @param msec timeout time,The unit is millisecond. It waits forever,if msec is port-MAX_DELAY.
  *
  * @return
  *  - true : succeed

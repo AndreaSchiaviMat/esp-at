@@ -18,6 +18,9 @@
 // static variables
 static esp_at_device_ops_struct s_interface_ops;
 static esp_at_custom_ops_struct s_interface_hooks;
+static esp_at_cmd_struct at_custom_cmd[] = {    
+    {"+TEST", at_test_cmd_test, at_query_cmd_test, at_setup_cmd_test, at_exe_cmd_test},
+};
 
 #ifdef CONFIG_AT_INTF_SECURITY_SUPPORT
 static at_intf_security_ops_t s_intf_security_ops;

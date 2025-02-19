@@ -19,4 +19,5 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     esp_at_init();
+    esp_at_custom_cmd_array_regist(at_custom_cmd, sizeof(at_custom_cmd) / sizeof(at_custom_cmd[0]));
 }
